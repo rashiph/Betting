@@ -6,7 +6,6 @@
   <div class="col-xs-6 col-xs-offset-1">
     <h2>Place Bet</h2>
 
-    <!-- Todos input -->
     <form role="form">
       <div class="row">
         <div class="input-group">
@@ -19,7 +18,7 @@
     </form>
     <br/>
 
-    <div class="row  table-bordered">
+    <div class="row table-bordered" ng-show="haveBets()">
       <div class="col-xs-3">
         <h3>Win Pool</h3>
 
@@ -51,6 +50,16 @@
     </div>
 
     <br/>
+
+    <form role="form" ng-show="haveBets()">
+      <div class="row">
+        <div class="input-group">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Clear All Bets" ng-click="clearAllBets()">
+        </span>
+        </div>
+      </div>
+    </form>
   </div>
 
   <div class="col-xs-3 col-xs-offset-1">

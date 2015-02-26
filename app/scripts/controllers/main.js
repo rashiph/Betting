@@ -13,7 +13,7 @@ angular.module('tabcorpApp')
 
     $scope.addBet = function () {
       $scope.error = '';
-      if(!verifyBet()){
+      if (!verifyBet()) {
         $scope.error = 'Error : Invalid Bet Placed';
         return;
       }
@@ -28,7 +28,7 @@ angular.module('tabcorpApp')
 
     $scope.declareResult = function () {
       $scope.error = '';
-      if(!verifyResult()){
+      if (!verifyResult()) {
         $scope.error = 'Error : Invalid Result';
         return;
       }
@@ -36,12 +36,19 @@ angular.module('tabcorpApp')
       $scope.dividend = dividendService.calculate($scope.bets, $scope.publishedResult);
     };
 
-    var verifyResult = function(){
+    $scope.clearAllBets = function () {
+      $scope.bets = [];
+    };
+
+    $scope.haveBets = function () {
+      return $scope.bets.length > 0;
+    };
+    var verifyResult = function () {
       var expression = /(R|r):(\d:){2,}\d/i;
       return expression.test($scope.result)
     };
 
-    var verifyBet = function(){
+    var verifyBet = function () {
       var expression = /(W|w|E|e|P|p|Q|q):((\d,\d:)|\d:)\d/i;
       return expression.test($scope.bet)
     };
