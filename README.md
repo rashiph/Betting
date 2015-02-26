@@ -2,9 +2,9 @@
 
 ## First time setup
 
-Run `npm install`.
-Run `npm install --global bower grunt-cli` to install all dependencies.
-Run `bower install` to download bower components.
+0. Run `npm install`.
+0. Run `npm install --global bower grunt-cli` to install all dependencies.
+0. Run `bower install` to download bower components.
 
 ## Build & development
 
