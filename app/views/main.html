@@ -1,4 +1,8 @@
 <div class="row">
+  <div class="col-xs-offset-1 col-xs-10 alert alert-danger" ng-show="error">
+    {{error}}
+  </div>
+
   <div class="col-xs-6 col-xs-offset-1">
     <h2>Place Bet</h2>
 
@@ -64,13 +68,13 @@
 
       <br/>
 
-      <div ng-show="dividendOfWinPool">
-        <h4>Win - Runner {{result.firstRunnerUp}} - ${{dividendOfWinPool}}</h4>
-        <h4>Place - Runner {{result.firstRunnerUp}} - ${{dividendOfPlacePoolForFirstRunnerUp}}</h4>
-        <h4>Place - Runner {{result.secondRunnerUp}} - ${{dividendOfPlacePoolForSecondRunnerUp}}</h4>
-        <h4>Place - Runner {{result.thirdRunnerUp}} - ${{dividendOfPlacePoolForThirdRunnerUp}}</h4>
-        <h4>Exacta - Runners {{result.thirdRunnerUp}} - ${{dividendOfExactaPool}}</h4>
-        <h4>Quinella - Runners {{result.thirdRunnerUp}} - ${{dividendOfQuinellaPool}}</h4>
+      <div ng-show="dividend">
+        <h4>Win - Runner {{publishedResult.firstRunnerUp}} - ${{dividend.dividendOfWinPool}}</h4>
+        <h4>Place - Runner {{publishedResult.firstRunnerUp}} - ${{dividend.dividendOfPlacePoolForFirstRunnerUp}}</h4>
+        <h4>Place - Runner {{publishedResult.secondRunnerUp}} - ${{dividend.dividendOfPlacePoolForSecondRunnerUp}}</h4>
+        <h4>Place - Runner {{publishedResult.thirdRunnerUp}} - ${{dividend.dividendOfPlacePoolForThirdRunnerUp}}</h4>
+        <h4>Exacta - Runners {{publishedResult.thirdRunnerUp}} - ${{dividend.dividendOfExactaPool}}</h4>
+        <h4>Quinella - Runners {{publishedResult.thirdRunnerUp}} - ${{dividend.dividendOfQuinellaPool}}</h4>
       </div>
     </form>
   </div>

@@ -13,8 +13,6 @@
     "underscore": "1.5.1",
     "angular-local-storage": "~0.1.5"
   },
-  "devDependencies": {
-  },
   "appPath": "app",
   "moduleName": "tabcorpApp"
 }
